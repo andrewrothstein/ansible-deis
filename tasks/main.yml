@@ -1,0 +1,16 @@
+---
+- name: downloading...
+  become: '{{deis_elevate}}'
+  become_user: root
+  get_url:
+    url: '{{deis_url}}'
+    dest: '{{deis_target}}'
+    mode: 0755
+
+- name: linking...
+  become: '{{deis_elevate}}'
+  become_user: root
+  file:
+    src: '{{deis_target}}'
+    dest: '{{deis_target_link}}'
+    state: link

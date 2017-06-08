@@ -1,0 +1,8 @@
+---
+# defaults file for deis
+deis_ver: v2.15.0
+deis_mirror: https://storage.googleapis.com/workflow-cli-release
+deis_platform: linux-amd64
+
+deis_install_dir: /usr/local/bin
+deis_elevate: True
