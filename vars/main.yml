@@ -1,7 +1,9 @@
 ---
 # vars file for deis
+deis_platform: '{{ deis_os }}-{{ deis_arch }}'
 deis_bin: deis-{{deis_ver}}-{{deis_platform}}
 deis_url: '{{deis_mirror}}/{{deis_ver}}/{{deis_bin}}'
+deis_checksum: '{{ deis_checksums[deis_ver][deis_platform] }}'
 
 deis_target: '{{deis_install_dir}}/{{deis_bin}}'
 deis_target_link: '{{deis_install_dir}}/deis'
